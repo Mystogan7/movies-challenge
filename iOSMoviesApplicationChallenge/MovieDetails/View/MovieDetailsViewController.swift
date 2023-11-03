@@ -8,12 +8,49 @@
 import UIKit
 
 class MovieDetailsViewController: UIViewController {
-    private let posterImageView = UIImageView()
-    private let titleLabel = UILabel()
-    private let releaseDateLabel = UILabel()
-    private let genresLabel = UILabel()
-    private let overviewLabel = UILabel()
-    private let ratingLabel = UILabel()
+    private lazy var posterImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 10
+        imageView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        return imageView
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 16)
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    private let overviewLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    private let genresLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.numberOfLines = 9
+        return label
+    }()
+    
+    private let releaseDateLabel: UILabel = {
+        let label = UILabel()
+        label.font = .italicSystemFont(ofSize: 12)
+        return label
+    }()
+    
+    private let ratingLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        return label
+    }()
     
     var movieId: Int!
     
@@ -53,23 +90,6 @@ class MovieDetailsViewController: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .white
-        
-        posterImageView.contentMode = .scaleAspectFill
-        posterImageView.clipsToBounds = true
-        posterImageView.layer.cornerRadius = 10
-        posterImageView.heightAnchor.constraint(equalToConstant: 250).isActive = true
-        
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        titleLabel.numberOfLines = 0
-        
-        releaseDateLabel.font = UIFont.systemFont(ofSize: 14)
-        
-        genresLabel.font = UIFont.systemFont(ofSize: 14)
-        
-        overviewLabel.font = UIFont.systemFont(ofSize: 14)
-        overviewLabel.numberOfLines = 0
-        
-        ratingLabel.font = UIFont.systemFont(ofSize: 14)
         
         let stackView = UIStackView(arrangedSubviews: [posterImageView, titleLabel, releaseDateLabel, genresLabel, overviewLabel, ratingLabel])
         stackView.axis = .vertical
