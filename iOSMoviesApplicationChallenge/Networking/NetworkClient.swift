@@ -14,17 +14,8 @@ protocol NetworkClientProtocol {
 final class NetworkClient: NetworkClientProtocol {
     private let session: URLSession
     
-    init(session: URLSession = URLSession.shared, urlCache: URLCache? = nil) {
+    init(session: URLSession = URLSession.shared) {
         self.session = session
-        
-        if let cache = urlCache {
-            self.session.configuration.urlCache = cache
-        } else {
-            let memoryCapacity = 500 * 1024 * 1024
-            let diskCapacity = 500 * 1024 * 1024
-            let cache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: "dataCache")
-            self.session.configuration.urlCache = cache
-        }
     }
     
     func request<T: Decodable>(_ url: URL, completion: @escaping (Result<T, Error>) -> Void) {

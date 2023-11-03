@@ -14,7 +14,7 @@ struct MoviesAPI {
     static let accessToken = Configuration.accessToken
     
     enum Endpoint {
-        case moviesList
+        case moviesList(page: Int)
         case movieDetails(id: Int)
         case moviePoster(path: String)
     }
@@ -25,15 +25,18 @@ extension MoviesAPI.Endpoint {
         var components: URLComponents!
         
         switch self {
-        case .moviesList:
+        case .moviesList(let page):
             components = URLComponents(string: MoviesAPI.baseURL)
-            components?.path += "/discover"
+            components?.path += "/discover/movie"
+            components?.queryItems = [
+                URLQueryItem(name: "page", value: "\(page)"),
+            ]
         case .movieDetails(let id):
             components = URLComponents(string: MoviesAPI.baseURL)
             components?.path += "/movie/\(id)"
         case .moviePoster(let path):
             components = URLComponents(string: MoviesAPI.posterBaseURL)
-            components?.path += "/\(path)"
+            components?.path += "\(path)"
         }
         
         return components?.url

@@ -8,7 +8,7 @@
 import Foundation
 
 class MoviesListService: AsyncCaller {
-    typealias P = Void
+    typealias P = Int
     
     typealias T = MoviesListResponse
     
@@ -19,7 +19,7 @@ class MoviesListService: AsyncCaller {
     }
     
     func call(with parameters: P, completion: @escaping (Result<T, Error>) -> Void) {
-        guard let url = MoviesAPI.Endpoint.moviesList.url() else {
+        guard let url = MoviesAPI.Endpoint.moviesList(page: parameters).url() else {
             completion(.failure(NetworkError.invalidURL("Invalid moviesList url.")))
             return
         }

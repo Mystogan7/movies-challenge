@@ -9,15 +9,18 @@ import Foundation
 
 enum Configuration {
     private static let config: NSDictionary = {
-        guard let path = Bundle.main.path(forResource: "Configurations", ofType: "plist"),
-              let config = NSDictionary(contentsOfFile: path) else {
+        guard let path = Bundle.main.path(forResource: "Configurations", ofType: "plist") else {
+            print("Configurations.plist not found")
+            fatalError()
+        }
+        guard let config = NSDictionary(contentsOfFile: path) else {
             fatalError("Configurations.plist not found")
         }
         return config
     }()
     
     static var baseURL: String {
-        guard let baseURL = Configuration.config["BaseURL"] as? String else {
+        guard let baseURL = Configuration.config["BaseUrl"] as? String else {
             fatalError("Invalid or missing BaseURL for configuration")
         }
         return baseURL
