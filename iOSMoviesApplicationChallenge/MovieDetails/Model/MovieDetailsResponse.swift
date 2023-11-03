@@ -8,41 +8,24 @@
 import Foundation
 
 struct MovieDetailsResponse: Codable {
-    let adult: Bool
     let backdropPath: String
-    let budget: Int
     let genres: [Genre]
-    let homepage: String
-    let id: Int
-    let imdbID, originalLanguage, originalTitle, overview: String
-    let popularity: Double
-    let posterPath: String
+    let overview: String
     let releaseDate: String
-    let revenue, runtime: Int
-    let status, tagline, title: String
-    let video: Bool
+    let title: String
     let voteAverage: Double
-    let voteCount: Int
 
     enum CodingKeys: String, CodingKey {
-        case adult
+        case genres
         case backdropPath = "backdrop_path"
-        case budget, genres, homepage, id
-        case imdbID = "imdb_id"
-        case originalLanguage = "original_language"
-        case originalTitle = "original_title"
-        case overview, popularity
-        case posterPath = "poster_path"
+        case overview
         case releaseDate = "release_date"
-        case revenue, runtime
-        case status, tagline, title, video
+        case title
         case voteAverage = "vote_average"
-        case voteCount = "vote_count"
     }
 }
 
-// MARK: - Genre
-struct Genre: Codable {
+struct Genre: Codable, Equatable {
     let id: Int
     let name: String
 }

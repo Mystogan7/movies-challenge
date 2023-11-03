@@ -19,7 +19,7 @@ class MoviesListViewController: UIViewController {
         return tableView
     }()
     
-    var viewModel: MoviesListViewModelProtocol = MoviesListViewModel()
+    private var viewModel: MoviesListViewModelProtocol = MoviesListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +46,7 @@ class MoviesListViewController: UIViewController {
     }
         
     private func setupUI() {
+        self.navigationItem.title = "Trending"
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -81,7 +82,9 @@ extension MoviesListViewController: UITableViewDataSource {
 
 extension MoviesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let destination = MovieDetailsViewController()
+        destination.movieId = viewModel.movie(atIndex: indexPath.row)?.id ?? 0
+        self.navigationController?.pushViewController(destination, animated: true)
     }
 }
 

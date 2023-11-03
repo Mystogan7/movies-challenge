@@ -16,8 +16,7 @@ struct MoviesListResponse: Codable {
     }
 }
 
-// MARK: - Result
-struct Movie: Codable {
+struct Movie: Codable, Equatable {
     let id: Int
     let overview: String
     let posterPath, releaseDate, title: String

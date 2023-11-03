@@ -48,6 +48,7 @@ class MovieTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .none
         setupUI()
     }
 
@@ -93,17 +94,6 @@ class MovieTableViewCell: UITableViewCell {
         posterImageView.image = nil
     }
     
-    private func loadImage(for url: URL, into imageView: UIImageView) {
-        imageView.image = nil
-        imageView.imageURL = url
-        
-        ImageLoader.shared.loadImage(from: url) { [weak imageView] image in
-            if let image = image, let currentURL = imageView?.imageURL, currentURL == url {
-                imageView?.image = image
-            }
-        }
-    }
-    
     func configure(with movie: Movie) {
         titleLabel.text = movie.title
         overviewLabel.text = movie.overview
@@ -115,6 +105,6 @@ class MovieTableViewCell: UITableViewCell {
             return
         }
         
-        loadImage(for: url, into: posterImageView)
+        posterImageView.loadImage(for: url)
     }
 }

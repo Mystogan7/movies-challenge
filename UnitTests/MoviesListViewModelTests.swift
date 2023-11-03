@@ -37,7 +37,7 @@ class MoviesListViewModelTests: XCTestCase {
 
         let fetchExpectation = expectation(description: "fetchMovies success")
         sut.onFetchSuccess = { [weak self] _ in
-            XCTAssertEqual(expectedResponse.results[0].id, self?.sut.movie(atIndex: 0)?.id)
+            XCTAssertEqual(expectedResponse.results[0], self?.sut.movie(atIndex: 0))
             XCTAssertEqual(self?.sut.currentCount(), movies.count)
             fetchExpectation.fulfill()
         }

@@ -45,7 +45,6 @@ class MoviesListViewModel<Service: AsyncCaller>: MoviesListViewModelProtocol whe
 
         isFetching = true
         let nextPage = currentPage + 1
-        let startingIndex = movies.count
         
         service.call(with: nextPage) { [weak self] result in
             guard let self = self else { return }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-class MoviesListService: AsyncCaller {
-    typealias P = Int
-    
+class MoviesListService: AsyncCaller {    
     typealias T = MoviesListResponse
-    
+
+    typealias P = Int
+
     private let client: NetworkClientProtocol
     
     init(client: NetworkClientProtocol = NetworkClient()) {

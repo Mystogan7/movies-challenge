@@ -134,7 +134,6 @@
 				871185042AF52A6C0047E44C /* MovieDetails */,
 				871184F82AF5203F0047E44C /* APIConfigurations */,
 				871184F52AF517D00047E44C /* Networking */,
-				871185112AF52C870047E44C /* Generics */,
 				871184C92AF3DC1F0047E44C /* Main.storyboard */,
 				871184CC2AF3DC200047E44C /* Assets.xcassets */,
 				871184CE2AF3DC200047E44C /* LaunchScreen.storyboard */,
@@ -192,7 +191,7 @@
 		871185042AF52A6C0047E44C /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
-				871185122AF52DA60047E44C /* view */,
+				871185122AF52DA60047E44C /* View */,
 				871185152AF52DCE0047E44C /* ViewModel */,
 				8711851A2AF52E2B0047E44C /* Model */,
 				8711851B2AF52E320047E44C /* Service */,
@@ -233,20 +232,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		871185112AF52C870047E44C /* Generics */ = {
-			isa = PBXGroup;
-			children = (
-				8711850F2AF52C770047E44C /* AsyncCaller.swift */,
-			);
-			path = Generics;
-			sourceTree = "<group>";
-		};
-		871185122AF52DA60047E44C /* view */ = {
+		871185122AF52DA60047E44C /* View */ = {
 			isa = PBXGroup;
 			children = (
 				871185022AF52A5D0047E44C /* MovieDetailsViewController.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		871185152AF52DCE0047E44C /* ViewModel */ = {
@@ -276,6 +267,7 @@
 		8711851E2AF560F50047E44C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8711850F2AF52C770047E44C /* AsyncCaller.swift */,
 				8711851F2AF560F50047E44C /* ImageLoader.swift */,
 			);
 			path = Utilities;

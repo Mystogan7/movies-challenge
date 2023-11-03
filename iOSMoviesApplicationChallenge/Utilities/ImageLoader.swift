@@ -72,4 +72,15 @@ extension UIImageView {
             objc_setAssociatedObject(self, &AssociatedKeys.imageURL, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
+    
+    func loadImage(for url: URL) {
+        self.image = nil
+        self.imageURL = url
+        
+        ImageLoader.shared.loadImage(from: url) { [weak self] image in
+            if let image = image, let currentURL = self?.imageURL, currentURL == url {
+                self?.image = image
+            }
+        }
+    }
 }
