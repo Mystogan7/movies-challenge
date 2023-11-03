@@ -27,7 +27,7 @@ class MoviesDetailsViewModelTests: XCTestCase {
 
     func testFetchDetailsSuccess() {
         // Given
-        let expectedResponse = MovieDetailsResponse(genres: [Genre(id: 1, name: "action")], overview: "overview", posterPath: "/path", releaseDate: "1993-11-08", title: "TestMovie", voteAverage: 8.0)
+        let expectedResponse = MovieDetailsResponse(backdropPath: "/path", genres: [Genre(id: 1, name: "action")], overview: "overview", releaseDate: "1993-11-08", title: "TestMovie", voteAverage: 8.0)
 
         mockService.response = expectedResponse
 

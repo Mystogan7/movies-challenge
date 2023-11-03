@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieDetailsResponse: Codable {
+struct MovieDetailsResponse: Codable, Equatable {
     let backdropPath: String
     let genres: [Genre]
     let overview: String
