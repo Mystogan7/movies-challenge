@@ -1,6 +1,6 @@
 //
 //  MoviesListViewModelTests.swift
-//  MoviesListViewModelTests
+//  iOSMoviesApplicationChallenge
 //
 //  Created by Mohamed Abdelhamid Mohamed Oshaiba on 02/11/2023.
 //

@@ -17,6 +17,9 @@
 		871184E52AF3DC200047E44C /* MoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184E42AF3DC200047E44C /* MoviesUITests.swift */; };
 		871184F42AF510830047E44C /* MoviesDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184F32AF510830047E44C /* MoviesDetailsViewModelTests.swift */; };
 		871184F72AF517D00047E44C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184F62AF517D00047E44C /* NetworkClient.swift */; };
+		871184FD2AF5203F0047E44C /* MoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184FA2AF5203F0047E44C /* MoviesAPI.swift */; };
+		871184FE2AF5203F0047E44C /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184FB2AF5203F0047E44C /* Configurations.swift */; };
+		871185002AF5210E0047E44C /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 871184FF2AF5210E0047E44C /* Configurations.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		871184E42AF3DC200047E44C /* MoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITests.swift; sourceTree = "<group>"; };
 		871184F32AF510830047E44C /* MoviesDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		871184F62AF517D00047E44C /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		871184FA2AF5203F0047E44C /* MoviesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesAPI.swift; sourceTree = "<group>"; };
+		871184FB2AF5203F0047E44C /* Configurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		871184FF2AF5210E0047E44C /* Configurations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				871184C52AF3DC1F0047E44C /* SceneDelegate.swift */,
 				871184C72AF3DC1F0047E44C /* MoviesListViewController.swift */,
 				871184C92AF3DC1F0047E44C /* Main.storyboard */,
+				871184F82AF5203F0047E44C /* APIConfigurations */,
 				871184F52AF517D00047E44C /* Networking */,
 				871184CC2AF3DC200047E44C /* Assets.xcassets */,
 				871184CE2AF3DC200047E44C /* LaunchScreen.storyboard */,
@@ -136,6 +143,16 @@
 				871184F62AF517D00047E44C /* NetworkClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		871184F82AF5203F0047E44C /* APIConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				871184FF2AF5210E0047E44C /* Configurations.plist */,
+				871184FA2AF5203F0047E44C /* MoviesAPI.swift */,
+				871184FB2AF5203F0047E44C /* Configurations.swift */,
+			);
+			path = APIConfigurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				871184D02AF3DC200047E44C /* LaunchScreen.storyboard in Resources */,
+				871185002AF5210E0047E44C /* Configurations.plist in Resources */,
 				871184CD2AF3DC200047E44C /* Assets.xcassets in Resources */,
 				871184CB2AF3DC1F0047E44C /* Main.storyboard in Resources */,
 			);
@@ -271,7 +289,9 @@
 			files = (
 				871184C82AF3DC1F0047E44C /* MoviesListViewController.swift in Sources */,
 				871184C42AF3DC1F0047E44C /* AppDelegate.swift in Sources */,
+				871184FE2AF5203F0047E44C /* Configurations.swift in Sources */,
 				871184C62AF3DC1F0047E44C /* SceneDelegate.swift in Sources */,
+				871184FD2AF5203F0047E44C /* MoviesAPI.swift in Sources */,
 				871184F72AF517D00047E44C /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

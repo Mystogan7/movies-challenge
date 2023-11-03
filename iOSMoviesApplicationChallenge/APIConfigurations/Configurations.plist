@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PosterBaseURL</key>
+	<string>https://image.tmdb.org/t/p/original/</string>
+	<key>AccessToken</key>
+	<string>eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMzI3MWQ3NzJjODM1YzNlZjZkOGUzZGU0MDMwM2MxYyIsInN1YiI6IjY1NDRlYjZiMjg2NmZhMDBmZWZlNDU2MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KIpzAje-4wcM3ts3rUl9TE0GReNQkWoOYkOHAsb9S64</string>
+	<key>APIKey</key>
+	<string>e3271d772c835c3ef6d8e3de40303c1c</string>
+	<key>BaseUrl</key>
+	<string>https://api.themoviedb.org/3</string>
+</dict>
+</plist>

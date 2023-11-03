@@ -28,7 +28,11 @@ final class NetworkClient: NetworkClientProtocol {
     }
     
     func request<T: Decodable>(_ url: URL, completion: @escaping (Result<T, Error>) -> Void) {
-        session.dataTask(with: url) { data, response, error in
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("Bearer \(MoviesAPI.accessToken)", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
+        
+        session.dataTask(with: urlRequest) { data, response, error in
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.hasSuccessStatusCode else {
                 completion(.failure(NetworkError.statusCode))
                 return
