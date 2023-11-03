@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		871184C42AF3DC1F0047E44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184C32AF3DC1F0047E44C /* AppDelegate.swift */; };
 		871184C62AF3DC1F0047E44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184C52AF3DC1F0047E44C /* SceneDelegate.swift */; };
-		871184C82AF3DC1F0047E44C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184C72AF3DC1F0047E44C /* ViewController.swift */; };
+		871184C82AF3DC1F0047E44C /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184C72AF3DC1F0047E44C /* MoviesListViewController.swift */; };
 		871184CB2AF3DC1F0047E44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871184C92AF3DC1F0047E44C /* Main.storyboard */; };
 		871184CD2AF3DC200047E44C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871184CC2AF3DC200047E44C /* Assets.xcassets */; };
 		871184D02AF3DC200047E44C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871184CE2AF3DC200047E44C /* LaunchScreen.storyboard */; };
-		871184DB2AF3DC200047E44C /* iOSMoviesApplicationChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184DA2AF3DC200047E44C /* iOSMoviesApplicationChallengeTests.swift */; };
-		871184E52AF3DC200047E44C /* iOSMoviesApplicationChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184E42AF3DC200047E44C /* iOSMoviesApplicationChallengeUITests.swift */; };
-		871184E72AF3DC200047E44C /* iOSMoviesApplicationChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184E62AF3DC200047E44C /* iOSMoviesApplicationChallengeUITestsLaunchTests.swift */; };
+		871184DB2AF3DC200047E44C /* MoviesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184DA2AF3DC200047E44C /* MoviesListViewModelTests.swift */; };
+		871184E52AF3DC200047E44C /* MoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184E42AF3DC200047E44C /* MoviesUITests.swift */; };
+		871184F42AF510830047E44C /* MoviesDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184F32AF510830047E44C /* MoviesDetailsViewModelTests.swift */; };
+		871184F72AF517D00047E44C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871184F62AF517D00047E44C /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +40,17 @@
 		871184C02AF3DC1F0047E44C /* iOSMoviesApplicationChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMoviesApplicationChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		871184C32AF3DC1F0047E44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		871184C52AF3DC1F0047E44C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		871184C72AF3DC1F0047E44C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		871184C72AF3DC1F0047E44C /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		871184CA2AF3DC1F0047E44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		871184CC2AF3DC200047E44C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		871184CF2AF3DC200047E44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		871184D12AF3DC200047E44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		871184D62AF3DC200047E44C /* iOSMoviesApplicationChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMoviesApplicationChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		871184DA2AF3DC200047E44C /* iOSMoviesApplicationChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSMoviesApplicationChallengeTests.swift; sourceTree = "<group>"; };
+		871184DA2AF3DC200047E44C /* MoviesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModelTests.swift; sourceTree = "<group>"; };
 		871184E02AF3DC200047E44C /* iOSMoviesApplicationChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMoviesApplicationChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		871184E42AF3DC200047E44C /* iOSMoviesApplicationChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSMoviesApplicationChallengeUITests.swift; sourceTree = "<group>"; };
-		871184E62AF3DC200047E44C /* iOSMoviesApplicationChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSMoviesApplicationChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		871184E42AF3DC200047E44C /* MoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITests.swift; sourceTree = "<group>"; };
+		871184F32AF510830047E44C /* MoviesDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		871184F62AF517D00047E44C /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				871184C22AF3DC1F0047E44C /* iOSMoviesApplicationChallenge */,
-				871184D92AF3DC200047E44C /* iOSMoviesApplicationChallengeTests */,
-				871184E32AF3DC200047E44C /* iOSMoviesApplicationChallengeUITests */,
+				871184D92AF3DC200047E44C /* UnitTests */,
+				871184E32AF3DC200047E44C /* UITests */,
 				871184C12AF3DC1F0047E44C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,8 +103,9 @@
 			children = (
 				871184C32AF3DC1F0047E44C /* AppDelegate.swift */,
 				871184C52AF3DC1F0047E44C /* SceneDelegate.swift */,
-				871184C72AF3DC1F0047E44C /* ViewController.swift */,
+				871184C72AF3DC1F0047E44C /* MoviesListViewController.swift */,
 				871184C92AF3DC1F0047E44C /* Main.storyboard */,
+				871184F52AF517D00047E44C /* Networking */,
 				871184CC2AF3DC200047E44C /* Assets.xcassets */,
 				871184CE2AF3DC200047E44C /* LaunchScreen.storyboard */,
 				871184D12AF3DC200047E44C /* Info.plist */,
@@ -110,21 +113,29 @@
 			path = iOSMoviesApplicationChallenge;
 			sourceTree = "<group>";
 		};
-		871184D92AF3DC200047E44C /* iOSMoviesApplicationChallengeTests */ = {
+		871184D92AF3DC200047E44C /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				871184DA2AF3DC200047E44C /* iOSMoviesApplicationChallengeTests.swift */,
+				871184DA2AF3DC200047E44C /* MoviesListViewModelTests.swift */,
+				871184F32AF510830047E44C /* MoviesDetailsViewModelTests.swift */,
 			);
-			path = iOSMoviesApplicationChallengeTests;
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
-		871184E32AF3DC200047E44C /* iOSMoviesApplicationChallengeUITests */ = {
+		871184E32AF3DC200047E44C /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				871184E42AF3DC200047E44C /* iOSMoviesApplicationChallengeUITests.swift */,
-				871184E62AF3DC200047E44C /* iOSMoviesApplicationChallengeUITestsLaunchTests.swift */,
+				871184E42AF3DC200047E44C /* MoviesUITests.swift */,
 			);
-			path = iOSMoviesApplicationChallengeUITests;
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		871184F52AF517D00047E44C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				871184F62AF517D00047E44C /* NetworkClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				871184C82AF3DC1F0047E44C /* ViewController.swift in Sources */,
+				871184C82AF3DC1F0047E44C /* MoviesListViewController.swift in Sources */,
 				871184C42AF3DC1F0047E44C /* AppDelegate.swift in Sources */,
 				871184C62AF3DC1F0047E44C /* SceneDelegate.swift in Sources */,
+				871184F72AF517D00047E44C /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				871184DB2AF3DC200047E44C /* iOSMoviesApplicationChallengeTests.swift in Sources */,
+				871184F42AF510830047E44C /* MoviesDetailsViewModelTests.swift in Sources */,
+				871184DB2AF3DC200047E44C /* MoviesListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				871184E72AF3DC200047E44C /* iOSMoviesApplicationChallengeUITestsLaunchTests.swift in Sources */,
-				871184E52AF3DC200047E44C /* iOSMoviesApplicationChallengeUITests.swift in Sources */,
+				871184E52AF3DC200047E44C /* MoviesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
